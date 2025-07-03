@@ -33,7 +33,7 @@ function decorateProfileData(details){
         <h3 class="text-md font-semibold text-white">
         @${details.login}</h3>
         <p id="userBio" class="text-gray-400 mt-1">
-          ${details.bio}
+          ${details.bio ? details.bio : "N/A"}
         </p>
 
         <!-- Stats -->
@@ -47,9 +47,9 @@ function decorateProfileData(details){
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm mt-6 text-gray-300">
           <p><span class="font-semibold text-white">Company:</span> ${details.company ? details.company : "N/A"}</p>
           <p><span class="font-semibold text-white">Location:</span> ${details.location}</p>
-          <p><span class="font-semibold text-white">Blog:</span> <a href="#" class="text-blue-400 hover:underline" target="_blank"> ${details.bio ? details.bio : "No bio found for this user!"}</a></p>
+          <p><span class="font-semibold text-white">Blog:</span> <a href="#" class="text-blue-400 hover:underline" target="_blank"> ${details.bio ? details.bio : "N/A"}</a></p>
           
-          <p><span class="font-semibold text-white">Email:</span> ${details.email ? details.email : "(No email found for this user)"}</p>
+          <p><span class="font-semibold text-white">Email:</span> ${details.email ? details.email : "N/A"}</p>
           <p><span class="font-semibold text-white">Member Since:</span> ${details.created_at.substring(0,10)
 }</p>
         </div>
@@ -75,6 +75,6 @@ searchBtn.addEventListener("click",function(){
         })
     }
     else{
-        alert();
+        alert("Type in a valid input");
     }
 })
