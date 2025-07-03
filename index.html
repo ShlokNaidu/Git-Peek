@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub User Finder</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-[#0d1117] min-h-screen flex items-center justify-center px-4 text-gray-100">
+
+  <div class="max-w-3xl w-full space-y-8">
+    <!-- Title -->
+    <div class="text-center">
+      <h1 class="text-4xl font-bold text-white">GitHub User Finder</h1>
+      <p class="text-gray-400 mt-2">Enter a username to search GitHub profiles</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="flex items-center gap-4">
+      <input 
+        type="text" 
+        id="usernameInput"
+        placeholder="Enter GitHub username..."
+        class="flex-1 px-5 py-3 rounded-xl border border-gray-700 bg-[#161b22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 text-white"
+      />
+      <button 
+        id="searchButton"
+        class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all shadow-md"
+      >
+        Search
+      </button>
+    </div>
+
+    <!-- User Card with Dummy Data -->
+    <div id="userCard" class="bg-[#161b22] rounded-2xl shadow-xl p-6 flex flex-col md:flex-row gap-6 items-start">
+        <div class="shrink-0">
+        <img 
+          id="userAvatar" 
+          class="w-28 h-28 rounded-full border border-gray-700" 
+          src="https://avatars.githubusercontent.com/u/583231?v=4" 
+          alt="Octocat Avatar" 
+        />
+      </div>
+
+      <!-- User Info -->
+      <div class="flex-1">
+        <h2 id="userName" class="text-2xl font-semibold text-white">The Octocat</h2>
+        <p id="userBio" class="text-gray-400 mt-1">
+          GitHub’s official mascot. Lover of open source, creative code, and pixelated dreams.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex gap-4 mt-4 text-sm text-gray-400">
+          <span><strong id="userRepos">8</strong> Repos</span>
+          <span><strong id="userFollowers">6.4k</strong> Followers</span>
+          <span><strong id="userFollowing">9</strong> Following</span>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm mt-6 text-gray-300">
+          <p><span class="font-semibold text-white">Company:</span> GitHub Inc.</p>
+          <p><span class="font-semibold text-white">Location:</span> San Francisco, CA</p>
+          <p><span class="font-semibold text-white">Blog:</span> <a href="https://github.blog" class="text-blue-400 hover:underline" target="_blank">github.blog</a></p>
+          <p><span class="font-semibold text-white">Twitter:</span> <a href="https://twitter.com/github" class="text-blue-400 hover:underline" target="_blank">@github</a></p>
+          <p><span class="font-semibold text-white">Email:</span> octocat@github.com</p>
+          <p><span class="font-semibold text-white">Member Since:</span> Jan 25, 2011</p>
+        </div>
+
+        <!-- Profile Link -->
+        <div class="mt-6">
+          <a href="https://github.com/octocat" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 transition px-5 py-2 rounded-lg text-white shadow">
+            View GitHub Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>    
+
+</html>
