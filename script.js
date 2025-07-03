@@ -45,7 +45,7 @@ function decorateProfileData(details){
 
         <!-- Additional Info -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm mt-6 text-gray-300">
-          <p><span class="font-semibold text-white">Company:</span> ${details.company ? details.company : "N/A)"}</p>
+          <p><span class="font-semibold text-white">Company:</span> ${details.company ? details.company : "N/A"}</p>
           <p><span class="font-semibold text-white">Location:</span> ${details.location}</p>
           <p><span class="font-semibold text-white">Blog:</span> <a href="#" class="text-blue-400 hover:underline" target="_blank"> ${details.bio ? details.bio : "No bio found for this user!"}</a></p>
           
